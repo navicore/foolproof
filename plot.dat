@@ -1,4 +1,4 @@
-datafile = 'graphs/plot.csv'
+datafile = 'graphs/plot.tsv'
 
 set terminal jpeg size 1280,720
 set size 1, 1
