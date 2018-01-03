@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-./foolproof.sc 100000 7 > graphs/plot.csv
+./foolproof.sc 10000 7 > graphs/plot.csv
 

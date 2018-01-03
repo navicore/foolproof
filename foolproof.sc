@@ -1,6 +1,5 @@
-#!/usr/bin/env amm
-
-@ import ammonite.ops._
+#!/usr/bin/env scala
+val random = scala.util.Random
 
 def factorial(n: Int): Int = {
   if (n == 0) 
@@ -9,10 +8,7 @@ def factorial(n: Int): Int = {
     n * factorial(n-1)
 }
 
-//println(factorial(8))
-
-println("try,factoidal")
-val random = scala.util.Random
+println("Try\tFactoidal")
 
 def factoidal(n: Int): Int = {
   val r: Int = 1 + random.nextInt(n - 1)
@@ -30,9 +26,8 @@ def trioidal(n: Int): Int = {
     r + trioidal(r)
 }
 
-@main
-def main(tries: Int, n: Int) = {
-  //for (i <- 1 to tries) println(s"$i,${factoidal(n)}")
-  for (i <- 1 to tries) println(s"$i,${trioidal(n)}")
-}
+val tries = args(0).toInt
+val n = args(1).toInt
+//for (i <- 1 to tries) println(s"$i,${factoidal(n)}")
+for (i <- 1 to tries) println(s"$i\t${trioidal(n)}")
 

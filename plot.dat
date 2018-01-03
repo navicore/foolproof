@@ -3,10 +3,10 @@ datafile = 'graphs/plot.csv'
 set terminal jpeg size 1280,720
 set size 1, 1
 set output "graphs/factoidal.jpg"
-set title "Factoidal"
-set key left top
+set title "Factoidals"
+#set key left top
 set grid y
-set datafile separator ','
+set datafile separator '\t'
 firstrow = system('head -1 '.datafile)
 set xlabel word(firstrow, 1)
 set ylabel word(firstrow, 2)
